@@ -522,7 +522,8 @@ def get_osm_filter(network_type):
 
     # drive+service: allow ways tagged 'service' but filter out certain types of
     # service ways
-    filters['primary'] = ('["area"!~"yes"]["highway"!~"primary"]')
+    filters['primary'] = ('["area"!~"yes"]["highway"!~"primary|'
+                          'secondary"]')
 
     # walking: filter out cycle ways, motor ways, private ways, and anything
     # specifying foot=no. allow service roads, permitting things like parking
